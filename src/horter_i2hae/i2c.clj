@@ -49,6 +49,7 @@
   ([bus ba offset]
 
    (i2c/read-bytes bus
+                   ba
                    offset
                    11)
    ba)

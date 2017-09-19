@@ -1,5 +1,5 @@
 (defproject dvlopt/horter-i2hae
-            "0.0.0-alpha2"
+            "0.0.0-alpha3"
 
   :description  "Clojure lib for reading analog inputs via I2C (Horter I2HAE)"
   :url          "https://github.com/dvlopt/horter-i2hae"
