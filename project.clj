@@ -1,5 +1,5 @@
 (defproject dvlopt/horter-i2hae
-            "0.0.0-alpha0"
+            "0.0.0-alpha1"
 
   :description  "Clojure lib for reading analog inputs via I2C (Horter I2HAE)"
   :url          "https://github.com/dvlopt/horter-i2hae"
@@ -17,4 +17,5 @@
                                       [lein-codox      "0.10.3"]]
                        :codox        {:output-path  "doc/auto"
                                       :source-paths ["src"]}
+                       :repl-options {:timeout 180000}
                        :global-vars  {*warn-on-reflection* true}}})

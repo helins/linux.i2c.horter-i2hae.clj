@@ -1,5 +1,7 @@
 (ns horter-i2hae.i2c
 
+  "ADC via I2C"
+
   {:author "Adam Helinski"}
 
   (:require [icare.core :as i2c]))
@@ -38,8 +40,7 @@
 
    Do not forget to select the slave prior to reading.
   
-   Returns the number of read bytes if a byte array was given, should be 11
-           a new byte array if none was given
+   Returns the given or newly created byte array.
   
    Throws an IOException if something goes wrong during reading.
   
@@ -49,7 +50,8 @@
 
    (i2c/read-bytes bus
                    offset
-                   11))
+                   11)
+   ba)
 
 
   ([bus ba]
