@@ -74,15 +74,15 @@
 (defn process
 
   "Process raw data.
-  
-   Returns a vector containing 5 x 10 bits unsigned integers, one for every analog input canal.
+
+   Returns a map of channel no -> 10 bits unsigned integer.
   
    Cf. `raw-data`"
 
   [^bytes raw-data]
 
-  [(-to-unsigned raw-data 1  2)
-   (-to-unsigned raw-data 3  4)
-   (-to-unsigned raw-data 5  6)
-   (-to-unsigned raw-data 7  8)
-   (-to-unsigned raw-data 9 10)])
+  {1 (-to-unsigned raw-data 1  2)
+   2 (-to-unsigned raw-data 3  4)
+   3 (-to-unsigned raw-data 5  6)
+   4 (-to-unsigned raw-data 7  8)
+   5 (-to-unsigned raw-data 9 10)})
