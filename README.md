@@ -9,7 +9,7 @@ Relies on [Icare](https://github.com/dvlopt/icare), an I2C clojure lib.
 
 Simple add the following to your dependencies :
 
-    [dvlopt/horter-i2hae "0.0.0-alpha0"]
+    [dvlopt/horter-i2hae "0.0.0-alpha4"]
 
 ## Usage
 
@@ -31,7 +31,7 @@ Simple add the following to your dependencies :
 ;; finally, get the raw data and then extract the value for each channel
 ;; values are 10 bits unsigned integers, ie. between 0 and 1023 included
 (analog-in/process (analog-in/raw-data bus))
-;; => [24 546 0 245 0]
+;; {1 24, 2 546, 3 0, 4 245, 5 0}
 ```
 
 ## License

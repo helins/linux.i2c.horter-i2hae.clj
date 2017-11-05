@@ -9,12 +9,12 @@
 
 
 
-;;;;;;;;;;
+;;;;;;;;;; Private
 
 
 (defn- -to-unsigned
 
-  "Convert 2 bytes from a byte array to an unsigned int"
+  "Converts 2 bytes from a byte array into an \"unsigned\" int."
 
   [^bytes ba i-lsb i-msb]
 
@@ -34,25 +34,30 @@
 
 (defn raw-data
 
-  "Read 11 bytes of raw data into a byte array.
+  "Reads 11 bytes of raw data into a byte array.
 
    These bytes have to be processed in order to extract the values.
 
    Do not forget to select the slave prior to reading.
   
+
    Returns the given or newly created byte array.
   
-   Throws an IOException if something goes wrong during reading.
+
+   Throws
   
+     java.io.IOException
+       If something goes wrong during reading.
+  
+
    Cf. `process`"
 
-  ([bus ba offset]
+  ([bus]
 
-   (i2c/read-bytes bus
-                   ba
-                   offset
-                   11)
-   ba)
+   (let [ba (byte-array 11)]
+     (i2c/read-bytes bus
+                     ba)
+     ba))
 
 
   ([bus ba]
@@ -62,12 +67,13 @@
              0))
 
 
-  ([bus]
+  ([bus ba offset]
 
-   (let [ba (byte-array 11)]
-     (i2c/read-bytes bus
-                     ba)
-     ba)))
+   (i2c/read-bytes bus
+                   ba
+                   offset
+                   11)
+   ba))
 
 
 
