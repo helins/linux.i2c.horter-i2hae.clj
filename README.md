@@ -1,15 +1,11 @@
 # ADC via I2C
 
+[![Clojars Project](https://img.shields.io/clojars/v/dvlopt/horter-i2hae.svg)](https://clojars.org/dvlopt/horter-i2hae)
+
 Interact with [this](https://www.horter-shop.de/en/i2c-din-rail-modules/172-kit-i2c-analog-input-module-5-channel-10-bit-4260404260745.html)
 for reading up to 5 analog 10 bits inputs via I2C.
 
 Relies on [Icare](https://github.com/dvlopt/icare), an I2C clojure lib.
-
-## Installation
-
-Simply add the following to your dependencies :
-
-    [dvlopt/horter-i2hae "0.0.0-alpha4"]
 
 ## Usage
 
