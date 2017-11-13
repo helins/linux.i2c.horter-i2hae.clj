@@ -1,4 +1,4 @@
-# Analog input to I2C
+# ADC via I2C
 
 Interact with [this](https://www.horter-shop.de/en/i2c-din-rail-modules/172-kit-i2c-analog-input-module-5-channel-10-bit-4260404260745.html)
 for reading up to 5 analog 10 bits inputs via I2C.
@@ -7,7 +7,7 @@ Relies on [Icare](https://github.com/dvlopt/icare), an I2C clojure lib.
 
 ## Installation
 
-Simple add the following to your dependencies :
+Simply add the following to your dependencies :
 
     [dvlopt/horter-i2hae "0.0.0-alpha4"]
 
@@ -15,10 +15,10 @@ Simple add the following to your dependencies :
 
 ```clj
 (require '[icare.core       :as i2c]
-         '[horter-i2hae.i2c :as analog-in])
+         '[horter-i2hae.i2c :as adc])
 
 
-;; first, open an i2c bus where needed
+;; first, open an I2C bus where needed
 (def bus
      (i2c/open "/dev/i2c-1"))
 
@@ -30,7 +30,7 @@ Simple add the following to your dependencies :
 
 ;; finally, get the raw data and then extract the value for each channel
 ;; values are 10 bits unsigned integers, ie. between 0 and 1023 included
-(analog-in/process (analog-in/raw-data bus))
+(adc/process (adc/raw-data bus))
 ;; {1 24, 2 546, 3 0, 4 245, 5 0}
 ```
 
