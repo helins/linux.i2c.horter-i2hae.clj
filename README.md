@@ -12,7 +12,7 @@ for reading up to 5 analog 10 bits inputs via
 ## Usage
 
 Using [dvlopt.i2c](https://github.com/dvlopt/i2c) for opening an I2C bus and
-reading the ADC :
+reading the ADC (without error checking) :
 
 ```clj
 (require '[dvlopt.i2c                  :as i2c]
@@ -21,7 +21,7 @@ reading the ADC :
 
 ;; First, we need to open an I2C bus where needed
 (def bus
-     (i2c/open "/dev/i2c-1"))
+     (::i2c/bus (i2c/open "/dev/i2c-1")))
 
 
 ;; Then, select our ADC
@@ -34,7 +34,7 @@ reading the ADC :
      (adc/data-buffer))
 
 
-;; Let's read (you should do some error checking)
+;; Let's read
 (i2c/read-bytes bus
                 buff)
 
