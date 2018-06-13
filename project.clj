@@ -2,7 +2,7 @@
             "1.0.0"
 
   :description  "A/D conversion via I2C with Horter I2HAE"
-  :url          "https://github.com/dvlopt/i2c.horter-i2hae"
+  :url          "https://github.com/dvlopt/linux.i2c.horter-i2hae"
   :license      {:name "Eclipse Public License"
                  :url  "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[dvlopt/linux.i2c "1.1.0"]]
