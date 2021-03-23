@@ -1,4 +1,4 @@
-# ADC via I2C
+# Linux.I2C.Horter-I2HAE, driver for an A/C converter
 
 [![Clojars
 Project](https://img.shields.io/clojars/v/io.helins/linux.i2c.horter-i2hae.svg)](https://clojars.org/io.helins/linux.i2c.horter-i2hae)

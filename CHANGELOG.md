@@ -6,6 +6,16 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+### Changed
+
+### Fixed
+
+
+
+## [2.0.0] - 2021-03-24
+
 ### Changed
 
 - Relicensed under MPL 2.0
@@ -30,6 +40,7 @@ All notable changes to this project will be documented in this file.
 
 
 
-[Unreleased]: https://github.com/helins/linux.i2c.horter-i2hae.clj/compare/1.0.0...HEAD
-[0.0.0]: https://github.com/helins/linux.i2c.horter-i2hae.clj/compare/0.0.0...1.0.0
+[Unreleased]: https://github.com/helins/linux.i2c.horter-i2hae.clj/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/helins/linux.i2c.horter-i2hae.clj/compare/1.0.0...2.0.0
+[1.0.0]: https://github.com/helins/linux.i2c.horter-i2hae.clj/compare/0.0.0...1.0.0
 [0.0.0]: https://github.com/helins/linux.i2c.horter-i2hae.clj/tree/0.0.0
