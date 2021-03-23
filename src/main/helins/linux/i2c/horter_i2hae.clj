@@ -1,14 +1,15 @@
-(ns dvlopt.linux.i2c.horter-i2hae
+;; This Source Code Form is subject to the terms of the Mozilla Public
+;; License, v. 2.0. If a copy of the MPL was not distributed with this
+;; file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-  "Analog to digital conversion via I2C using a 5 channels 10 bit kit from Horter :
 
-       https://www.horter-shop.de/en/i2c-din-rail-modules/172-kit-i2c-analog-input-module-5-channel-10-bit-4260404260745.html"
+(ns helins.linux.i2c.horter-i2hae
+
+  "Analog to digital conversion via I2C using a [5 channels 10 bit kit from Horter](https://www.horter-shop.de/en/i2c-din-rail-modules/172-kit-i2c-analog-input-module-5-channel-10-bit-4260404260745.html)."
 
   {:author "Adam Helinski"}
   
-  (:require [dvlopt.linux.i2c :as i2c]))
-
-
+  (:require [helins.linux.i2c :as i2c]))
 
 
 ;;;;;;;;;;
@@ -20,7 +21,7 @@
 
    Returns a map of channel number -> 10 bit value.
   
-   Do not forget to select the needed slave before calling this function."
+   Do not forget to select the needed I2C slave device before calling this function."
 
   [bus]
 
